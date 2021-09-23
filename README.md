@@ -11,12 +11,6 @@
 npm install -g @angular/cli
 ```
 
-### Install In-memory Web API for Angular
-
-```
-npm install angular-in-memory-web-api --save
-```
-
 ## Start The Application
 
 ```
