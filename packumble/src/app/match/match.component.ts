@@ -28,7 +28,7 @@ import {
         animate('1s')
       ]),
       transition('right => normal', [
-        animate('0.5s')
+        animate('0s')
       ]),
     ]),
     trigger('swipeleft', [
@@ -42,7 +42,7 @@ import {
         animate('1s')
       ]),
       transition('left => normal', [
-        animate('0.5s')
+        animate('0s')
       ]),
     ]),
     trigger('fire', [
@@ -59,7 +59,7 @@ import {
         ]))
       ]),
       transition('fire => normal', [
-        animate('0.5s')
+        animate('1s')
       ]),
     ])
 
@@ -150,7 +150,7 @@ export class MatchComponent implements OnInit {
         imgId: this.currentImgId,
         email: this.matchingEmail,
         isFlipped: false
-      })
+      });
 
       this.isFire = false;
       // Get next card
