@@ -1,0 +1,26 @@
+<div class="container p-3 mt-5 page border rounded">
+
+    <h1>Packumble</h1>
+
+    <p class="lead">Your team match making service! Just enter your information to get started.</p>
+
+    <section class="p-3 border rounded">
+        <form>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" [(ngModel)]="profile.username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="username">
+            </div>
+
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Favorite language</label>
+                <select class="form-select" id="inputGroupSelect01" [(ngModel)]="profile.language" name="language">
+            <option value="" disabled>Choose...</option>
+            <option *ngFor="let lang of languages" [ngValue]="lang">{{lang}}</option>
+          </select>
+            </div>
+
+            <button type="button" class="btn btn-danger" (click)="startMatching()">Match!</button>
+        </form>
+    </section>
+
+</div>
