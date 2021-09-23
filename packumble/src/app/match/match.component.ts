@@ -19,6 +19,8 @@ export class MatchComponent implements OnInit {
   isSwipeLeft = false;
   isSwipeRight = false;
   isFire = false;
+  buttonsDisabled = false;
+
 
   constructor(private route: ActivatedRoute, private location: Location) { }
 
@@ -38,6 +40,7 @@ export class MatchComponent implements OnInit {
   }
 
   leftButton(): void {
+    this.buttonsDisabled = true;
     this.isSwipeLeft = true;
     this.isSwipeRight = false;
     this.isFire = false;
@@ -45,16 +48,18 @@ export class MatchComponent implements OnInit {
       fetch('http://localhost:3030/see')
         .then(response => response.json())
         .then(card => {
-          this.syncDelay(300);
+          this.syncDelay(1000);
           this.currentName = card.name;
           this.currentLang = card.language;
           this.currentImgId = card.imgId;
           this.isSwipeLeft = false;
+          this.buttonsDisabled = false;
         });
     });
   }
 
   rightButton(): void {
+    this.buttonsDisabled = true;
     this.isSwipeLeft = false;
     this.isSwipeRight = false;
     this.isFire = false;
@@ -78,12 +83,13 @@ export class MatchComponent implements OnInit {
         fetch('http://localhost:3030/see')
           .then(response => response.json())
           .then(newcard => {
-            this.syncDelay(300);
+            this.syncDelay(1000);
             this.currentName = newcard.name;
             this.currentLang = newcard.language;
             this.currentImgId = newcard.imgId;
             this.isFire = false;
             this.isSwipeRight = false;
+            this.buttonsDisabled = false;
           });
       });
   }

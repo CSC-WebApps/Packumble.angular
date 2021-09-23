@@ -10,8 +10,8 @@
         </div>
 
         <div class="d-flex flex-row m-3 justify-content-evenly">
-            <button (click)="leftButton()"><<</button>
-            <button (click)="rightButton()">>></button>
+            <button (click)="leftButton()" [disabled]="buttonsDisabled"><<</button>
+            <button (click)="rightButton()" [disabled]="buttonsDisabled">>></button>
         </div>
     </section>
     <section class="p-5">

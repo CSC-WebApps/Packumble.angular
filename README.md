@@ -26,7 +26,7 @@ In another terminal tab, start the server:
 ```
 cd server
 npm install
-node index.js
+npm run start
 ```
 
 ## Debugging
