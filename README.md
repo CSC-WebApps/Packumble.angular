@@ -15,6 +15,7 @@ npm install -g @angular/cli
 
 ```
 cd packumble
+npm install
 ng serve --open
 ```
 
