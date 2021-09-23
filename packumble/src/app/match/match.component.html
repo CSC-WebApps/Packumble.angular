@@ -5,13 +5,16 @@
     <section class="p-5">
 
         <div id="potentialmatch-container" class="d-flex flex-row m-3 justify-content-evenly">
-            <app-card class="p-2 card w-50" [name]="currentName" [language]="currentLang" [imageid]="currentImgId"
-                [ngClass]="{ 'swipeleft': isSwipeLeft, 'swiperight': isSwipeRight, 'fire': isFire }" [ismatched]="false"></app-card>
+            <app-card [@swiperight]="isSwipeRight ? 'right' : 'normal'" (@swiperight.done)="swipeRightDone()"
+                [@swipeleft]="isSwipeLeft ? 'left' : 'normal'" (@swipeleft.done)="swipeLeftDone()"
+                [@fire]="isFire ? 'fire' : 'normal'" (@fire.done)="fireDone()"
+                class="p-2 card w-50" [name]="currentName" [language]="currentLang" [imageid]="currentImgId"
+                [ismatched]="false"></app-card>
         </div>
 
         <div class="d-flex flex-row m-3 justify-content-evenly">
-            <button (click)="leftButton()" [disabled]="buttonsDisabled"><<</button>
-            <button (click)="rightButton()" [disabled]="buttonsDisabled">>></button>
+            <button (click)="leftButton()"><<</button>
+            <button (click)="rightButton()">>></button>
         </div>
     </section>
     <section class="p-5">
