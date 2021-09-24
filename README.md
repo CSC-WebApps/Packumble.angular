@@ -31,7 +31,7 @@ npm run start
 
 ## Debugging
 
-I used [Angular DevTools](https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh) for Chrome. This adds an "Angular" tab to Developer Tools.
+You can use [Angular DevTools](https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh) for Chrome. This adds an "Angular" tab to Developer Tools.
 
 ## Create an Application from Scratch
 
