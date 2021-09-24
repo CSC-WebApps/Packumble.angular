@@ -31,4 +31,4 @@ npm run start
 
 ## Debugging
 
-I used [Angular DevTools](https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh). This adds an "Angular" tab to Developer Tools.
+I used [Angular DevTools](https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh) for Chrome. This adds an "Angular" tab to Developer Tools.
